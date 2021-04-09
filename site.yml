@@ -9,7 +9,7 @@
     yum: 
       update_cache: yes
     changed_when: false
-    when: ansible_distribution == "CentOS"
+    when: (ansible_distribution == "CentOS" and ansible_distribution == "Amazon")
 
   - name: update repo cache (Ubuntu)
     tags: always
